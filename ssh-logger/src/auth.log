@@ -1,0 +1,75 @@
+Dec 4 23:10:05 testserver useradd[866]: new group: name=test, GID=1000
+Dec 4 23:10:05 testserver useradd[866]: new user: name=test, UID=1000, GID=1000, home=/home/test,
+shell=/bin/bash, from=none
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'adm'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'cdrom'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'sudo'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'dip'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'plugdev'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to group 'lxd'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'adm'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'cdrom'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'sudo'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'dip'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'plugdev'
+Dec 4 23:10:05 testserver useradd[866]: add 'test' to shadow group 'lxd'
+Dec 4 23:10:05 testserver systemd-logind[901]: New seat seat0.
+Dec 4 23:10:05 testserver systemd-logind[901]: Watching system buttons on /dev/input/event2 (VMware
+VMware Virtual USB Keyboard)
+Dec 4 23:10:05 testserver sshd[1090]: Server listening on 0.0.0.0 port 22.
+Dec 4 23:10:05 testserver sshd[1090]: Server listening on :: port 22.
+Dec 4 23:10:06 testserver useradd[1344]: new user: name=lxd, UID=999, GID=100,
+home=/var/snap/lxd/common/lxd, shell=/bin/false, from=none
+Dec 4 23:10:14 testserver login[963]: pam_unix(login:session): session opened for user test(uid=1000)
+by LOGIN(uid=0)
+Dec 4 23:10:14 testserver systemd-logind[901]: New session 1 of user test.
+Dec 4 23:10:14 testserver systemd: pam_unix(systemd-user:session): session opened for user
+test(uid=1000) by (uid=0)
+Dec 4 23:10:38 testserver sshd[1726]: pam_unix(sshd:auth): authentication failure; logname= uid=0
+euid=0 tty=ssh ruser= rhost=192.168.234.1 user=test
+Dec 4 23:10:40 testserver sshd[1726]: Failed password for test from 192.168.234.1 port 65009 ssh2
+Dec 4 23:10:45 testserver sshd[1726]: Failed password for test from 192.168.234.1 port 65009 ssh2
+Dec 4 23:10:48 testserver sshd[1726]: Accepted password for test from 192.168.234.1 port 65009 ssh2
+Dec 4 23:10:48 testserver sshd[1726]: pam_unix(sshd:session): session opened for user test(uid=1000)
+by (uid=0)
+Dec 4 23:10:48 testserver systemd-logind[901]: New session 3 of user test.
+Dec 4 23:17:01 testserver CRON[1797]: pam_unix(cron:session): session opened for user root(uid=0)
+by (uid=0)
+Dec 4 23:17:01 testserver CRON[1797]: pam_unix(cron:session): session closed for user root
+Dec 5 00:05:25 testserver sshd[1726]: pam_unix(sshd:session): session closed for user test
+Dec 5 00:05:25 testserver systemd-logind[901]: Session 3 logged out. Waiting for processes to exit.
+Dec 5 00:05:25 testserver systemd-logind[901]: Removed session 3.
+Dec 5 00:05:36 testserver sshd[1874]: Accepted password for test from 192.168.234.1 port 51760 ssh2
+Dec 5 00:05:36 testserver sshd[1874]: pam_unix(sshd:session): session opened for user test(uid=1000)
+by (uid=0)
+Dec 5 00:05:36 testserver systemd-logind[901]: New session 5 of user test.
+Dec 5 00:07:40 testserver sshd[1972]: Received disconnect from 192.168.234.1 port 51760:11:
+disconnected by user
+Dec 5 00:07:40 testserver sshd[1972]: Disconnected from user test 192.168.234.1 port 51760
+Dec 5 00:07:40 testserver sshd[1874]: pam_unix(sshd:session): session closed for user test
+Dec 5 00:07:40 testserver systemd-logind[901]: Session 5 logged out. Waiting for processes to exit.
+Dec 5 00:07:40 testserver systemd-logind[901]: Removed session 5.
+Dec 5 00:07:57 testserver sshd[1991]: Invalid user test1 from 192.168.234.1 port 51799
+Dec 5 00:08:02 testserver sshd[1991]: pam_unix(sshd:auth): check pass; user unknown
+Dec 5 00:08:02 testserver sshd[1991]: pam_unix(sshd:auth): authentication failure; logname= uid=0
+euid=0 tty=ssh ruser= rhost=192.168.234.1
+Dec 5 00:08:04 testserver sshd[1991]: Failed password for invalid user test1 from 192.168.234.1 port
+51799 ssh2
+Dec 5 00:08:07 testserver sshd[1991]: pam_unix(sshd:auth): check pass; user unknown
+Dec 5 00:08:09 testserver sshd[1991]: Failed password for invalid user test1 from 192.168.234.1 port
+51799 ssh2
+Dec 5 00:08:11 testserver sshd[1991]: pam_unix(sshd:auth): check pass; user unknown
+Dec 5 00:08:13 testserver sshd[1991]: Failed password for invalid user test1 from 192.168.234.1 port
+51799 ssh2
+
+Dec 5 00:08:14 testserver sshd[1991]: Connection closed by invalid user test1 192.168.234.1 port 51799
+[preauth]
+Dec 5 00:08:14 testserver sshd[1991]: PAM 2 more authentication failures; logname= uid=0 euid=0
+tty=ssh ruser= rhost=192.168.234.1
+Dec 5 00:08:28 testserver sshd[1993]: Accepted password for test from 192.168.234.1 port 51806 ssh2
+Dec 5 00:08:28 testserver sshd[1993]: pam_unix(sshd:session): session opened for user test(uid=1000)
+by (uid=0)
+Dec 5 00:08:28 testserver systemd-logind[901]: New session 6 of user test.
+Dec 5 00:17:01 testserver CRON[2071]: pam_unix(cron:session): session opened for user root(uid=0)
+by (uid=0)
+Dec 5 00:17:01 testserver CRON[2071]: pam_unix(cron:session): session closed for user root

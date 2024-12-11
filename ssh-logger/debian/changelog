@@ -1,0 +1,5 @@
+ssh-logger (1.1.0) jammy; urgency=medium
+
+  * jammy release - fixed log issues
+
+ -- Piyush Goenka <goenkapiyush5@gmail.com>  Wed, 05 Dec 2024 14:47:24 -0400

@@ -1,0 +1,12 @@
+Source: ssh-logger
+Maintainer: Piyush Goenka <goenkapiyush5@gmail.com>
+Build-Depends: debhelper,dh-python,python3-all,python3-setuptools
+Section: devel
+Priority: optional
+Standards-Version: 3.9.6
+X-Python3-Version: >= 3.6
+
+Package: ssh-logger
+Architecture: any
+Description: Log SSH events
+Depends: ${python3:Depends},python3-requests
