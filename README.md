@@ -2,3 +2,4 @@
 Creating and Deploying a Personal Package Archive (PPA) for SSH Log Monitoring
 
 Video https://www.youtube.com/watch?v=Hlr_BfruzU4
+Read report.pdf for step-by-step tutorial
